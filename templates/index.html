@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Космический Атлас</title>
+</head>
+<body>
+<h1>Добро пожаловать в Космический Атлас!</h1>
+<p>Здесь вы можете изучать космические объекты.</p>
+
+<h2>Список объектов:</h2>
+<ul>
+    {% for obj in objects %}
+    <li>
+        <strong>{{ obj.name }}</strong> ({{ obj.type }}) в созвездии {{ obj.constellation }}.
+        Расстояние: {{ obj.distance_ly }} световых лет.
+        {% if obj.description %}<br><em>{{ obj.description }}</em>{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Добавить новый объект (через API)</h2>
+<p>Отправьте POST-запрос на <code>/api/objects</code> с JSON-данными.</p>
+</body>
+</html>
