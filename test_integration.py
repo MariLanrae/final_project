@@ -39,10 +39,8 @@ def test_delete_object():
     assert response.status_code == 201
     obj_id = response.json()["id"]
 
-    # Удаляем
     response = requests.delete(f"{BASE_URL}/api/objects/{obj_id}")
     assert response.status_code == 200
 
-    # Проверяем, что больше не существует
     response = requests.get(f"{BASE_URL}/api/objects/{obj_id}")
     assert response.status_code == 404
