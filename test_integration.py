@@ -10,7 +10,6 @@ def test_get_objects():
     assert len(objects) >= 0  # Может быть 0, если список пуст
 
 def test_add_and_get_object():
-    """Тест: добавить объект и получить его."""
     new_obj = {
         "name": "Тестовая Планета",
         "type": "Планета",
