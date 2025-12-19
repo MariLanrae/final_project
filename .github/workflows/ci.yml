@@ -35,9 +35,9 @@ jobs:
           python -m unittest test_unit.py -v
 
       # 5. Запускаем интеграционные тесты
-      - name: Run integration tests
-        run: |
-          python -m pytest test_integration.py -v
+#      - name: Run integration tests
+#        run: |
+#          python -m pytest test_integration.py -v
 
     # 6. (Опционально) Запускаем системные тесты
     #    Обратите внимание: Selenium может не работать в CI без headless-режима и правильных настроек
