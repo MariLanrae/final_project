@@ -3,7 +3,6 @@ import requests
 BASE_URL = "http://localhost:5000"
 
 def test_get_objects():
-    """Тест: получить список объектов."""
     response = requests.get(f"{BASE_URL}/api/objects")
     assert response.status_code == 200
     objects = response.json()

@@ -1,8 +1,5 @@
-# .github/workflows/ci.yml
-
 name: CI/CD Pipeline
 
-# Запускать при push в ветку main и при создании Pull Request
 on:
   push:
     branches: [ "main" ]
