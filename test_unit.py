@@ -20,7 +20,6 @@ class TestSpaceObjects(unittest.TestCase):
         self.assertEqual(len(space_objects), 1)
 
     def test_add_object_logic(self):
-        """Тест: логика добавления объекта (вручную)."""
         new_obj = {
             "id": 2,
             "name": "Новая Звезда",

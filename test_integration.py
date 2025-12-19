@@ -7,7 +7,7 @@ def test_get_objects():
     assert response.status_code == 200
     objects = response.json()
     assert isinstance(objects, list)
-    assert len(objects) >= 0  # Может быть 0, если список пуст
+    assert len(objects) >= 0
 
 def test_add_and_get_object():
     new_obj = {
@@ -29,7 +29,6 @@ def test_add_and_get_object():
     assert retrieved["name"] == "Тестовая Планета"
 
 def test_delete_object():
-    """Тест: создать и удалить объект."""
     new_obj = {
         "name": "Объект для удаления",
         "type": "Астероид",
